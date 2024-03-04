@@ -25,20 +25,6 @@ class _PLaystoreState extends State<PLaystore> {
   }
 
   @override
-//   void initState() {
-//     super.initState();
-//     Timer(
-//         Duration(seconds: 1),
-//         () => Navigator.pushReplacement(
-//             context, MaterialPageRoute(builder: (context) => Foryou())));
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//         color: Colors.grey[900], child: Image.asset('images/g2.png'));
-//   }
-// }
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +35,9 @@ class _PLaystoreState extends State<PLaystore> {
           appBar: AppBar(
             backgroundColor: Colors.grey[900],
             toolbarHeight: 150,
+            
+ // appbar search part
+            
             title: Column(
               children: [
                 Container(
@@ -89,6 +78,9 @@ class _PLaystoreState extends State<PLaystore> {
                     ],
                   ),
                 ),
+
+  // tabbar portion
+                
                 Padding(
                   padding: const EdgeInsets.only(top: 10.0),
                   child: TabBar(tabs: [
@@ -113,7 +105,13 @@ class _PLaystoreState extends State<PLaystore> {
               ],
             ),
           ),
+          
+// tabbar view portion
+          
           body: TabBarView(children: [Foryou(), App()]),
+          
+// bottomnavigation portion
+          
           bottomNavigationBar: BottomNavigationBar(
             items: [
               BottomNavigationBarItem(
